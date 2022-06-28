@@ -1,0 +1,72 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier", "@typescript-eslint", "react-hooks"],
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "eslint:recommended",
+    "prettier"
+  ],
+  "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "prettier/prettier": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/no-var-requires": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/*.test.ts", "**/*.test.tsx", "**/webpack.*"] }
+    ],
+    "react/jsx-one-expression-per-line": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "no-nested-ternary": "off",
+    "react/jsx-closing-bracket-location": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off",
+    "react/function-component-definition": "off",
+    "react/button-has-type": "off",
+    "@typescript-eslint/no-non-null-assertion": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
