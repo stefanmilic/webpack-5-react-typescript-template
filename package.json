@@ -4,8 +4,11 @@
     "build": "cross-env NODE_ENV=production webpack --config ./build-utils/webpack.config.prod.js",
     "build-dev": "webpack",
     "clean": "rm -rf ./dist",
-    "lint": "stylelint src/**/*.{css,scss}",
-    "lint:fix": "stylelint --fix src/**/*.{css,scss}"
+    "eslint": "eslint \"src/**/*.{js,jsx,ts,tsx,json}\"",
+    "eslint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx,json}\"",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md,json} --config ./.prettierrc",
+    "stylelint": "stylelint src/**/*.{css,scss}",
+    "stylelint:fix": "stylelint --fix src/**/*.{css,scss}"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
